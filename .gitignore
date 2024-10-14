@@ -1,0 +1,16 @@
+# Diretórios e arquivos que o Android Studio gera automaticamente
+.idea/
+.gradle/
+*.iml
+build/
+app/build/
+
+# Diretórios e arquivos gerados para cache local
+*.log
+.DS_Store
+local.properties
+
+# Outras pastas específicas para Android
+.cxx/
+.externalNativeBuild/
+
