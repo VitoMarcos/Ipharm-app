@@ -14,9 +14,6 @@ import br.edu.up.ipharm.fragmentos.fragVariado
 
 class MainActivity2 : AppCompatActivity() {
 
-    //lateinit var rvRemedio: RecyclerView
-    //lateinit var btnComprar: Button
-
     lateinit var btnRemedio: Button
     lateinit var btnVariados: Button
     lateinit var textLista: TextView
@@ -31,17 +28,6 @@ class MainActivity2 : AppCompatActivity() {
             insets
         }
 
-        //rvRemedio = findViewById(R.id.listRemedios)
-
-//        val remedios = listOf(
-//            Remedio("Paracetamol", "-", "Dor de cabeça", "Comprar")
-//        )
-
-        //rvRemedio.adapter = RemedioAdapter(remedios)
-
-        //rvRemedio.layoutManager = LinearLayoutManager(this)
-
-        //btnComprar = findViewById(R.id.btnComprar)
 
         btnRemedio = findViewById(R.id.btnRemedio)
         btnVariados = findViewById(R.id.btnVariados)

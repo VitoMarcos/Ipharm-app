@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.up.ipharm.R
-import br.edu.up.ipharm.Remedio
-import br.edu.up.ipharm.RemedioAdapter
+import br.edu.up.ipharm.DataRemedio.Remedio
+import br.edu.up.ipharm.DataRemedio.RemediosAdapter
 
 class OutroFrag : Fragment() {
 
@@ -29,10 +29,13 @@ class OutroFrag : Fragment() {
         rvRemedio = view.findViewById(R.id.listRemedios)
 
         val remedios = listOf(
-            Remedio("Paracetamol", "-", "Dor de cabeça")
+            Remedio("Paracetamol", "-", "Dor de cabeça"),
+            Remedio("Ibuprofeno", R.drawable.img_9.toString(), "Dor e inflamação"),
+            Remedio("Dipirona", R.drawable.img_4.toString(), "Dores")
+
         )
 
-        rvRemedio.adapter = RemedioAdapter(remedios)
+        rvRemedio.adapter = RemediosAdapter(remedios)
 
         rvRemedio.layoutManager = LinearLayoutManager(requireContext())
 

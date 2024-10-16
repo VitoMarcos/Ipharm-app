@@ -1,4 +1,4 @@
-package br.edu.up.ipharm
+package br.edu.up.ipharm.DataVariado
 
 
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-
+import br.edu.up.ipharm.R
 
 
 class VariadoAdapter(val lista: List<Variado>): Adapter<VariadoAdapter.VariadoViewHolder>() {

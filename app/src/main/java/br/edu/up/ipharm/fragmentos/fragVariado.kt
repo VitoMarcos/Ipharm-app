@@ -8,10 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.up.ipharm.R
-import br.edu.up.ipharm.Remedio
-import br.edu.up.ipharm.RemedioAdapter
-import br.edu.up.ipharm.Variado
-import br.edu.up.ipharm.VariadoAdapter
+import br.edu.up.ipharm.DataVariado.Variado
+import br.edu.up.ipharm.DataVariado.VariadoAdapter
 
 class fragVariado : Fragment() {
 

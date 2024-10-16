@@ -1,21 +1,25 @@
-package br.edu.up.ipharm
+package br.edu.up.ipharm.DataRemedio
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import br.edu.up.ipharm.R
 
-class RemedioAdapter(val lista: List<Remedio>): Adapter<RemedioAdapter.RemedioViewHolder>() {
+class RemediosAdapter(val lista: List<Remedio>): RecyclerView.Adapter<RemediosAdapter.RemedioViewHolder>() {
 
     inner class RemedioViewHolder(val itemVIew: View) : ViewHolder(itemVIew){
+
+        private var remedioList = emptyList<Remedio>()
+        // Continuar daqui
 
         val txtNome: TextView = itemView.findViewById(R.id.textNome)
         val txtMsg: TextView = itemView.findViewById(R.id.textMsg)
         val txtImg: ImageView = itemView.findViewById(R.id.imgFoto)
-        //val btnComprar: Button = itemView.findViewById(R.id.btnComprar)
+
 
     }
 
@@ -36,7 +40,7 @@ class RemedioAdapter(val lista: List<Remedio>): Adapter<RemedioAdapter.RemedioVi
         RemedioHolder.txtNome.text = Remedio.nome
         RemedioHolder.txtImg.setImageResource(R.drawable.img)
         RemedioHolder.txtMsg.text = Remedio.msg
-        //RemedioHolder.btnComprar.text = Remedio.comprar
+
 
     }
 
