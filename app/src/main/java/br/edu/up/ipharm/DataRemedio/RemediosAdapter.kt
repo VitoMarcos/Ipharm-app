@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import br.edu.up.ipharm.R
 
-class RemediosAdapter(val lista: List<Remedio>): RecyclerView.Adapter<RemediosAdapter.RemedioViewHolder>() {
+class RemediosAdapter(val lista: List<Remedio>,
+                      private val onImageClick: (Remedio) -> Unit): RecyclerView.Adapter<RemediosAdapter.RemedioViewHolder>() {
 
     inner class RemedioViewHolder(val itemVIew: View) : ViewHolder(itemVIew){
 
-        private var remedioList = emptyList<Remedio>()
-        // Continuar daqui
 
         val txtNome: TextView = itemView.findViewById(R.id.textNome)
         val txtMsg: TextView = itemView.findViewById(R.id.textMsg)
@@ -36,11 +35,14 @@ class RemediosAdapter(val lista: List<Remedio>): RecyclerView.Adapter<RemediosAd
 
     override fun onBindViewHolder(RemedioHolder : RemedioViewHolder, position: Int) {
 
-        val Remedio = lista[position]
-        RemedioHolder.txtNome.text = Remedio.nome
+        val remedio = lista[position]
+        RemedioHolder.txtNome.text = remedio.nome
         RemedioHolder.txtImg.setImageResource(R.drawable.img)
-        RemedioHolder.txtMsg.text = Remedio.msg
+        RemedioHolder.txtMsg.text = remedio.msg
 
+        RemedioHolder.txtImg.setOnClickListener {
+            onImageClick(remedio)
+        }
 
     }
 
