@@ -36,9 +36,15 @@ class OutroFrag : Fragment() {
         rvRemedio = view.findViewById(R.id.listRemedios)
 
         val remedios = listOf(
-            Remedio("Paracetamol", "-", "Dor de cabeça"),
-            Remedio("Ibuprofeno", R.drawable.img_9.toString(), "Dor e inflamação"),
-            Remedio("Dipirona", R.drawable.img_4.toString(), "Dores")
+            Remedio(1, "Paracetamol", null, "Dores"),
+            Remedio(2, "Ibuprofeno", R.drawable.img_9, "Dor e inflamação"),
+            Remedio(3, "Dipirona", R.drawable.img_4, "Dores"),
+            Remedio(4, "Imosec", R.drawable.img_2, "Alguma coisa"),
+            Remedio(5, "Benegripe", R.drawable.img_3, "Gripe"),
+            Remedio(6, "Clonazepam", R.drawable.img_5, "Algo"),
+            Remedio(7, "Creatina", R.drawable.img_7, "Projeto Ramon Dino"),
+            Remedio(8, "Omeprazol", R.drawable.img_6, "Problemas no estômago")
+
 
         )
 

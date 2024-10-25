@@ -10,7 +10,8 @@ import kotlinx.parcelize.Parcelize
 @Entity(tableName = "tabela_remedio")
 data class Remedio(
     @PrimaryKey(autoGenerate = true)
+    val id: Int,
     val nome: String,
-    val foto: String,
+    val foto: Int?,
     val msg : String
 ): Parcelable
